@@ -1,0 +1,21 @@
+
+entity Product {
+	id Integer,
+    name String,
+    price Double,
+    image String,
+    note String,
+    quantity Integer
+}
+
+// Set pagination options
+// paginate Product with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+// service all with serviceImpl except Product
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

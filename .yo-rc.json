@@ -1,0 +1,36 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.team.xiaolin"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "xiaolin",
+    "packageName": "com.team.xiaolin",
+    "packageFolder": "com/team/xiaolin",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MDc1NGQwM2ViMWE3NzEzNjBmN2U4YWVjY2RmNjYxZjg3ZDM0NzIzZTJjODhkYTY3M2JjN2IzNzc3YWEwNTRlMDFhYmU0ZWYzYWVmMmJkYjRiNzMzMTgyYjc1NzMyM2NiYjkyZjdjMGUxYjYxMzNjNGFkMzgyNzliOGM1MTExMjQ=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "enableHibernateCache": false,
+    "herokuAppName": "xiaolin",
+    "herokuDeployType": "git"
+  }
+}
