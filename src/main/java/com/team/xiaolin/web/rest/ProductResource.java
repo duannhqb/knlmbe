@@ -3,9 +3,15 @@ import com.team.xiaolin.domain.Product;
 import com.team.xiaolin.repository.ProductRepository;
 import com.team.xiaolin.web.rest.errors.BadRequestAlertException;
 import com.team.xiaolin.web.rest.util.HeaderUtil;
+import com.team.xiaolin.web.rest.util.PaginationUtil;
+
 import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
+import org.springframework.data.domain.Page;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -79,9 +85,11 @@ public class ProductResource {
      * @return the ResponseEntity with status 200 (OK) and the list of products in body
      */
     @GetMapping("/products")
-    public List<Product> getAllProducts() {
+    public ResponseEntity<Page<Product>> getAllProducts(Pageable pageable) {
         log.debug("REST request to get all Products");
-        return productRepository.findAll();
+        Page<Product> page = productRepository.findAll(pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "api/products");
+        return new ResponseEntity<Page<Product>>(page, headers, HttpStatus.OK);
     }
 
     /**
